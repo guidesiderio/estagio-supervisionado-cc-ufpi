@@ -2,6 +2,10 @@
 
 Landing page informativa sobre a disciplina de **Estágio Supervisionado** do curso de Ciência da Computação da Universidade Federal do Piauí (UFPI).
 
+## Demo
+
+Acesse o site em: **https://estagio-supervisionado-cc-ufpi.vercel.app/**
+
 ## Sobre
 
 Site estático de página única que reúne todas as informações essenciais para o aluno: objetivos, pré-requisitos, fluxo do processo, regras, obrigações, avaliação, documentos necessários e FAQ.
