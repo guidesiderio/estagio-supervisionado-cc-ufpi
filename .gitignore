@@ -1,12 +1,3 @@
-# Claude Code
-.claude/
-CLAUDE.md
-.agents/
-skills-lock.json
-
-# Source docs (reference only, not served)
-docs/
-
 # Dependencies
 node_modules/
 
