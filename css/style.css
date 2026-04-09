@@ -1148,6 +1148,9 @@ section {
 .faq-resposta p:last-child {
   margin-bottom: 0;
 }
+.faq-resposta .nao-confirmada {
+  color: #c62828;
+}
 
 /* ─── CONTATO ────────────────────────────────── */
 .contato-grid {

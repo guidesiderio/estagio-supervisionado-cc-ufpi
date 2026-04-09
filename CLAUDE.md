@@ -16,7 +16,7 @@ Open `index.html` directly in a browser — no server or build step required. To
 - **[css/style.css](css/style.css)** — all styles: design tokens via CSS custom properties, responsive layout, tonal architecture.
 - **[js/script.js](js/script.js)** — accordion (FAQ), hamburger menu, scroll fade-in animations, active navigation section tracking (IntersectionObserver).
 - **[assets/](assets/)** — static assets organized in subdirectories:
-  - `assets/forms/` — downloadable form documents (.docx)
+  - `assets/forms/` — downloadable form documents (.docx and .pdf)
   - `assets/icons/` — SVG/icon assets
   - `assets/img/` — screenshots and images
 - **[docs/DESIGN.md](docs/DESIGN.md)** — design system specification ("The Academic Luminary"). Defines colors, typography, elevation, components, and do's/don'ts. **Primary source of truth for visual design.**
