@@ -684,6 +684,81 @@ section {
   border-radius: 50%;
 }
 
+/* ─── PRE-REQUISITOS: badges & e-mail template ─ */
+.prereq-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+.prereq-badge-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  cursor: default;
+  transition:
+    background var(--duration-normal) var(--ease-out),
+    transform var(--duration-normal) var(--ease-spring),
+    box-shadow var(--duration-normal) var(--ease-out);
+}
+.prereq-badge-card:hover {
+  background: var(--primary-container);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+.prereq-badge-icon {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+.prereq-badge-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+}
+.prereq-badge-label {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--on-surface-variant);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+.prereq-text {
+  font-size: var(--text-sm);
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+.email-template {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+}
+.email-template p {
+  margin-bottom: 4px;
+}
+.email-template pre {
+  margin-top: var(--space-3);
+  padding: var(--space-4);
+  background: var(--surface-container-high);
+  border-radius: var(--radius-lg);
+  font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
+  font-size: var(--text-xs);
+  color: var(--on-surface);
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
 /* ─── FLUXO ──────────────────────────────────── */
 .fluxo-grid {
   display: grid;
@@ -768,6 +843,30 @@ section {
 .fluxo-obs svg {
   flex-shrink: 0;
   margin-top: 1px;
+}
+.fluxo-info-box {
+  margin-top: var(--space-4);
+  padding: 16px 20px;
+  background: var(--primary-container);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-xs);
+  color: var(--on-surface);
+  line-height: 1.7;
+}
+.fluxo-info-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: var(--text-sm);
+}
+.fluxo-info-header strong {
+  color: var(--primary);
+}
+.fluxo-info-box p {
+  color: var(--on-surface-variant);
+  margin: 0;
 }
 
 /* Fluxo connector arrows (desktop) */
@@ -1426,6 +1525,9 @@ button:focus-visible,
     grid-template-columns: 1fr;
   }
   .prereq-layout {
+    grid-template-columns: 1fr;
+  }
+  .prereq-badges {
     grid-template-columns: 1fr;
   }
   .regras-grid {
