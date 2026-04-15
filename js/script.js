@@ -1,3 +1,12 @@
+// ─── DARK MODE TOGGLE ───────────────────────────
+const themeToggle = document.querySelector(".theme-toggle");
+if (themeToggle) {
+  themeToggle.addEventListener("click", function () {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+}
+
 // ─── ACCORDION ──────────────────────────────────
 function toggle(btn) {
   const item = btn.closest(".faq-item");

@@ -11,6 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+      (function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark")})();
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Ir para o conteúdo principal</a>
@@ -19,7 +22,7 @@
     <header>
       <div class="header-inner">
         <a href="#" class="header-logo">
-          <div class="dot"></div>
+          <img src="assets/img/logo-ufpi.png" alt="Logo UFPI" class="header-logo-img" />
           <span>Estágio Supervisionado · CC/UFPI</span>
         </a>
         <nav aria-label="Navegação principal">
@@ -30,6 +33,18 @@
           <a href="#faq">FAQ</a>
           <a href="#contato">Contato</a>
         </nav>
+        <button
+          class="theme-toggle"
+          aria-label="Alternar modo escuro"
+          title="Alternar modo escuro"
+        >
+          <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
         <button
           class="nav-toggle"
           aria-expanded="false"
@@ -385,7 +400,7 @@
               <div class="prereq-warn-card fade-in">
                 <h4>Conversão de estágio não obrigatório</h4>
                 <p>
-                  Se você já faz estágio não obrigatório, é possível converter — mas é necessário
+                  Se você já faz estágio não obrigatório, é possível converter, mas é necessário
                   encerrar formalmente e reiniciar o processo como obrigatório. Horas anteriores não
                   são aproveitadas.
                 </p>
@@ -396,7 +411,12 @@
                 <ul>
                   <li>Monitoria ou iniciação científica</li>
                   <li>Vínculo empregatício CLT ou concurso público</li>
-                  <li>Estágios concluídos em semestres anteriores (Res. 346/2022 foi revogada)</li>
+                  <li class="prereq-warn-destaque">
+                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                    </svg>
+                    Estágios concluídos em semestres anteriores (Res. 346/2022 foi revogada)
+                  </li>
                 </ul>
               </div>
 
@@ -405,7 +425,7 @@
                 <p>A empresa ou órgão deve ser capaz de:</p>
                 <ul>
                   <li>Proporcionar experiências práticas na área de formação do estagiário</li>
-                  <li>Dispor de um profissional da área para assumir a supervisão do estagiário</li>
+                  <li>Ter um profissional disponível para supervisionar o estagiário (não é necessário que seja da área de TI)</li>
                 </ul>
               </div>
             </div>
@@ -498,7 +518,7 @@ Justificativa:</pre>
               <div class="fluxo-etapa">Convênio</div>
               <div class="fluxo-detalhe">
                 Verifique primeiro se a empresa ou instituição já possui convênio vigente com a
-                UFPI — nesse caso, nenhuma ação é necessária nesta etapa e o processo avança direto
+                UFPI. Nesse caso, nenhuma ação é necessária nesta etapa e o processo avança direto
                 para a criação do TCE (Etapa 3).
                 <br /><br />
                 Caso não haja convênio, preencha o
@@ -613,7 +633,7 @@ Justificativa:</pre>
                 <a href="#documentos">ver seção Documentos</a>
                 ), com a descrição das atividades desenvolvidas. O
                 <strong>supervisor</strong>
-                assina o relatório, atestando que tudo foi executado conforme o planejado — de
+                assina o relatório, atestando que tudo foi executado conforme o planejado, de
                 preferência incluindo uma descrição sucinta da experiência com o estagiário. O
                 relatório é enviado via SIGAA. Não há apresentação oral nem banca avaliadora. O
                 coordenador lança a nota:
@@ -945,7 +965,7 @@ Justificativa:</pre>
                 <p>
                   Sim, mas com condições. Veja os detalhes em
                   <a href="#prerequisitos">Pré-requisitos</a>
-                  — seção "Conversão de estágio não obrigatório".
+                  , na seção "Conversão de estágio não obrigatório".
                 </p>
               </div>
             </div>
@@ -984,7 +1004,7 @@ Justificativa:</pre>
               <div class="faq-resposta">
                 <p>
                   Sim. De acordo com a Lei Federal nº 11.788, de 25 de setembro de 2008, o pagamento
-                  de bolsa ao estagiário obrigatório é facultativo — ou seja, fica a critério da
+                  de bolsa ao estagiário obrigatório é facultativo, ou seja, fica a critério da
                   empresa ou instituição concedente oferecê-la ou não.
                 </p>
               </div>
@@ -1100,6 +1120,27 @@ Justificativa:</pre>
                   </span>
                 </button>
                 <div class="faq-resposta">
+                  <p class="nao-confirmada">
+                    Esta informação não foi confirmada pela coordenação. Para esclarecimentos, entre
+                    em contato diretamente com o Coordenador de Estágio.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+                  Posso realizar mais de um estágio ao mesmo tempo?
+                  <span class="faq-seta" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+                  </span>
+                </button>
+                <div class="faq-resposta">
+                  <p>Existem algumas combinações possíveis a considerar:</p>
+                  <ul>
+                    <li><strong>Dois estágios obrigatórios simultaneamente:</strong> não é permitido. Só é possível realizar um estágio obrigatório por vez.</li>
+                    <li><strong>Um estágio obrigatório e um não obrigatório ao mesmo tempo:</strong> em princípio não é permitido pela legislação, mas esta situação não foi confirmada diretamente com a coordenação.</li>
+                    <li><strong>Dois ou mais estágios não obrigatórios simultaneamente:</strong> a Lei Federal nº 11.788/2008 não proíbe explicitamente, mas instituições públicas costumam vedar em seus regulamentos internos. Verifique com a concedente.</li>
+                  </ul>
                   <p class="nao-confirmada">
                     Esta informação não foi confirmada pela coordenação. Para esclarecimentos, entre
                     em contato diretamente com o Coordenador de Estágio.

@@ -67,6 +67,130 @@
   --duration-slow: 400ms;
 }
 
+/* ─── DARK MODE ──────────────────────────────── */
+html.dark {
+  --surface: #1a1e22;
+  --surface-container-low: #22272c;
+  --surface-container-lowest: #2a3036;
+  --surface-container-high: #323a42;
+  --surface-dim: #3a434c;
+  --surface-variant: #3a434c;
+
+  --primary: #8db4e8;
+  --primary-dim: #7aa8e0;
+  --primary-container: #2a3d58;
+  --on-primary: #0e1c2e;
+
+  --on-surface: #e0e4e8;
+  --on-surface-variant: #a8b4be;
+  --outline-variant: rgba(169, 180, 185, 0.1);
+
+  --accent-green: #5cb882;
+  --accent-green-container: #1e3a2a;
+  --accent-amber: #f5a623;
+
+  --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+html.dark header {
+  background: rgba(26, 30, 34, 0.85);
+  border-bottom-color: rgba(169, 180, 185, 0.08);
+}
+html.dark .nav-mobile {
+  background: rgba(26, 30, 34, 0.97);
+}
+html.dark .hero {
+  background: linear-gradient(
+    170deg,
+    var(--primary-container) 0%,
+    #1e2530 40%,
+    var(--surface) 100%
+  );
+}
+html.dark .hero::after {
+  background: var(--surface);
+}
+html.dark .hero-badge-card {
+  background: rgba(42, 48, 54, 0.85);
+}
+html.dark .fluxo-card.destaque {
+  background: var(--accent-green-container);
+}
+html.dark .fluxo-card.destaque:hover {
+  background: #254a34;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+html.dark .fluxo-obs {
+  background: rgba(92, 184, 130, 0.08);
+}
+html.dark .avaliacao-resultado-item.inapto {
+  background: #3a2e1a;
+}
+html.dark .inapto .avaliacao-nota {
+  color: #e8a040;
+}
+html.dark .faq-pendentes {
+  background: var(--surface-container-high);
+}
+html.dark .faq-resposta .nao-confirmada {
+  color: #ef5350;
+}
+html.dark footer {
+  background: #111418;
+}
+html.dark .btn-primary {
+  box-shadow: 0 4px 16px rgba(141, 180, 232, 0.2);
+}
+html.dark .btn-primary:hover {
+  box-shadow: 0 8px 28px rgba(141, 180, 232, 0.3);
+}
+html.dark .email-template pre {
+  background: var(--surface-container-high);
+}
+html.dark .course-code {
+  background: var(--surface-container-high);
+}
+html.dark ::selection {
+  background: rgba(141, 180, 232, 0.2);
+  color: var(--primary);
+}
+html.dark ::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: var(--surface-dim);
+}
+
+/* ─── THEME TOGGLE ──────────────────────────── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--on-surface);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  transition: background var(--duration-fast);
+  flex-shrink: 0;
+  min-width: 40px;
+  min-height: 40px;
+}
+.theme-toggle:hover {
+  background: var(--surface-container-high);
+}
+.theme-toggle .icon-sun {
+  display: none;
+}
+html.dark .theme-toggle .icon-moon {
+  display: none;
+}
+html.dark .theme-toggle .icon-sun {
+  display: block;
+}
+
 /* ─── RESET ──────────────────────────────────── */
 *,
 *::before,
@@ -147,11 +271,9 @@ header {
   text-decoration: none;
   color: inherit;
 }
-.header-logo .dot {
-  width: 10px;
-  height: 10px;
-  background: var(--primary);
-  border-radius: 50%;
+.header-logo-img {
+  height: 32px;
+  width: auto;
   flex-shrink: 0;
 }
 .header-logo span {
@@ -700,6 +822,25 @@ section {
   height: 5px;
   background: var(--on-surface-variant);
   border-radius: 50%;
+}
+
+.prereq-warn-destaque {
+  color: #d97706 !important;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.prereq-warn-destaque svg {
+  color: #d97706;
+  flex-shrink: 0;
+}
+.prereq-warn-destaque::before {
+  display: none !important;
+}
+html.dark .prereq-warn-destaque,
+html.dark .prereq-warn-destaque svg {
+  color: #fbbf24 !important;
 }
 
 /* ─── PRE-REQUISITOS: badges & e-mail template ─ */
@@ -1279,6 +1420,27 @@ section {
 }
 .faq-resposta p:last-child {
   margin-bottom: 0;
+}
+.faq-resposta ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 12px;
+}
+.faq-resposta li {
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 8px;
+  max-width: 65ch;
+}
+.faq-resposta li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  background: var(--on-surface-variant);
+  border-radius: 50%;
 }
 .faq-resposta .nao-confirmada {
   color: #c62828;
