@@ -12,7 +12,11 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <script>
-      (function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark")})();
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (!t && matchMedia("(prefers-color-scheme:dark)").matches))
+          document.documentElement.classList.add("dark");
+      })();
     </script>
   </head>
   <body>
@@ -22,7 +26,7 @@
     <header>
       <div class="header-inner">
         <a href="#" class="header-logo">
-          <img src="assets/img/logo-ufpi.png" alt="Logo UFPI" class="header-logo-img" />
+          <img src="assets/img/logo-ufpi.png" alt="Logo UFPI" class="header-logo-img" width="32" height="32" />
           <span>Estágio Supervisionado · CC/UFPI</span>
         </a>
         <nav aria-label="Navegação principal">
@@ -33,16 +37,42 @@
           <a href="#faq">FAQ</a>
           <a href="#contato">Contato</a>
         </nav>
-        <button
-          class="theme-toggle"
-          aria-label="Alternar modo escuro"
-          title="Alternar modo escuro"
-        >
-          <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        <button class="theme-toggle" aria-label="Alternar modo escuro" title="Alternar modo escuro">
+          <svg
+            class="icon-moon"
+            aria-hidden="true"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
-          <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          <svg
+            class="icon-sun"
+            aria-hidden="true"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
           </svg>
         </button>
         <button
@@ -412,8 +442,22 @@
                   <li>Monitoria ou iniciação científica</li>
                   <li>Vínculo empregatício CLT ou concurso público</li>
                   <li class="prereq-warn-destaque">
-                    <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                    <svg
+                      aria-hidden="true"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                      />
+                      <line x1="12" y1="9" x2="12" y2="13" />
+                      <line x1="12" y1="17" x2="12.01" y2="17" />
                     </svg>
                     Estágios concluídos em semestres anteriores (Res. 346/2022 foi revogada)
                   </li>
@@ -425,13 +469,18 @@
                 <p>A empresa ou órgão deve ser capaz de:</p>
                 <ul>
                   <li>Proporcionar experiências práticas na área de formação do estagiário</li>
-                  <li>Ter um profissional disponível para supervisionar o estagiário (não é necessário que seja da área de TI)</li>
+                  <li>
+                    Ter um profissional disponível para supervisionar o estagiário (não é necessário
+                    que seja da área de TI)
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <h3 class="prereq-subtitle" style="margin-top: var(--space-10)">Matrícula na disciplina</h3>
+          <h3 class="prereq-subtitle prereq-subtitle--spaced">
+            Matrícula na disciplina
+          </h3>
 
           <h4 class="prereq-sub-heading">Dados da disciplina</h4>
           <div class="prereq-badges fade-in">
@@ -481,9 +530,9 @@
 
           <h4 class="prereq-sub-heading">Ajuste de créditos para matrícula</h4>
           <p class="prereq-text fade-in">
-            Durante o período de matrícula curricular ou extraordinária, caso seja necessário
-            ajuste de créditos (para mais) para efetivar a matrícula, envie um e-mail à
-            coordenação do curso no seguinte formato:
+            Durante o período de matrícula curricular ou extraordinária, caso seja necessário ajuste
+            de créditos (para mais) para efetivar a matrícula, envie um e-mail à coordenação do
+            curso no seguinte formato:
           </p>
           <div class="email-template fade-in">
             <p>
@@ -495,10 +544,12 @@
               Solicitação de Ajuste de Créditos para Matrícula
             </p>
             <p><strong>Corpo:</strong></p>
-            <pre>Nome:
+            <pre>
+Nome:
 Matrícula:
 Quantidade de Créditos:
-Justificativa:</pre>
+Justificativa:</pre
+            >
           </div>
         </div>
       </section>
@@ -520,12 +571,13 @@ Justificativa:</pre>
                 Verifique primeiro se a empresa ou instituição já possui convênio vigente com a
                 UFPI. Nesse caso, nenhuma ação é necessária nesta etapa e o processo avança direto
                 para a criação do TCE (Etapa 3).
-                <br /><br />
+                <br />
+                <br />
                 Caso não haja convênio, preencha o
                 <a
                   href="assets/forms/Form_SolicitacaoConvenioEstagioSupervisionado.docx"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Formulário de Solicitação de Convênio
                 </a>
@@ -575,7 +627,7 @@ Justificativa:</pre>
               <div class="fluxo-etapa">Criação do TCE</div>
               <div class="fluxo-detalhe">
                 Preencher o
-                <a href="assets/forms/Form_TermoCompromisso.docx" target="_blank" rel="noopener">
+                <a href="assets/forms/Form_TermoCompromisso.docx" target="_blank" rel="noopener noreferrer">
                   Formulário de Criação do Termo de Compromisso
                 </a>
                 e enviar ao Coordenador de Estágio (
@@ -912,7 +964,7 @@ Justificativa:</pre>
                 </a>
               </div>
             </div>
-            <div class="doc-card fade-in">
+            <div class="doc-card doc-card--disabled fade-in">
               <div class="doc-num">4</div>
               <div class="doc-conteudo">
                 <h3>
@@ -923,9 +975,9 @@ Justificativa:</pre>
                   Modelo oficial para elaboração do relatório de conclusão do estágio
                   supervisionado, a ser preenchido pelo aluno e assinado pelo supervisor da empresa.
                 </p>
-                <a href="assets/forms/Modelo_RelatorioFinal_EstagioSupervisionado.docx" download>
+                <span class="doc-link-disabled" aria-disabled="true">
                   Baixar modelo (.docx) ↓
-                </a>
+                </span>
               </div>
             </div>
           </div>
@@ -940,7 +992,7 @@ Justificativa:</pre>
 
           <div class="faq-list">
             <div class="faq-item">
-              <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+              <button class="faq-pergunta" aria-expanded="false">
                 Preciso estar estagiando para me matricular, ou me matriculo primeiro?
                 <span class="faq-seta" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -955,7 +1007,7 @@ Justificativa:</pre>
             </div>
 
             <div class="faq-item">
-              <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+              <button class="faq-pergunta" aria-expanded="false">
                 Posso usar meu estágio não obrigatório atual?
                 <span class="faq-seta" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -971,7 +1023,7 @@ Justificativa:</pre>
             </div>
 
             <div class="faq-item">
-              <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+              <button class="faq-pergunta" aria-expanded="false">
                 Estágio em órgão público é tratado diferente?
                 <span class="faq-seta" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -983,7 +1035,7 @@ Justificativa:</pre>
             </div>
 
             <div class="faq-item">
-              <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+              <button class="faq-pergunta" aria-expanded="false">
                 O TCE é assinado em papel?
                 <span class="faq-seta" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -995,7 +1047,7 @@ Justificativa:</pre>
             </div>
 
             <div class="faq-item">
-              <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+              <button class="faq-pergunta" aria-expanded="false">
                 O estagiário obrigatório pode receber bolsa?
                 <span class="faq-seta" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -1011,7 +1063,7 @@ Justificativa:</pre>
             </div>
 
             <div class="faq-item">
-              <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+              <button class="faq-pergunta" aria-expanded="false">
                 Posso continuar o estágio obrigatório após atingir a duração máxima de 2 anos?
                 <span class="faq-seta" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -1045,13 +1097,13 @@ Justificativa:</pre>
               <h3>Dúvidas ainda não confirmadas pela coordenação</h3>
             </div>
             <p class="faq-pendentes-intro">
-              As respostas abaixo ainda não foram confirmadas oficialmente pela coordenação.
-              Entre em contato para esclarecimentos.
+              As respostas abaixo ainda não foram confirmadas oficialmente pela coordenação. Entre
+              em contato para esclarecimentos.
             </p>
 
             <div class="faq-list">
               <div class="faq-item">
-                <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+                <button class="faq-pergunta" aria-expanded="false">
                   O que acontece se eu não atingir as 330 horas no semestre?
                   <span class="faq-seta" aria-hidden="true">
                     <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -1066,7 +1118,7 @@ Justificativa:</pre>
               </div>
 
               <div class="faq-item">
-                <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+                <button class="faq-pergunta" aria-expanded="false">
                   Posso trocar de empresa durante o semestre e aproveitar as horas anteriores?
                   <span class="faq-seta" aria-hidden="true">
                     <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -1081,7 +1133,7 @@ Justificativa:</pre>
               </div>
 
               <div class="faq-item">
-                <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+                <button class="faq-pergunta" aria-expanded="false">
                   Aluno em situação de jubilamento pode se matricular normalmente?
                   <span class="faq-seta" aria-hidden="true">
                     <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -1096,7 +1148,7 @@ Justificativa:</pre>
               </div>
 
               <div class="faq-item">
-                <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+                <button class="faq-pergunta" aria-expanded="false">
                   Critério de aderência do estágio à área de TI: quais atividades ou setores são
                   aceitos?
                   <span class="faq-seta" aria-hidden="true">
@@ -1112,7 +1164,7 @@ Justificativa:</pre>
               </div>
 
               <div class="faq-item">
-                <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+                <button class="faq-pergunta" aria-expanded="false">
                   O que acontece se o aluno for desligado do estágio antes de completar a carga
                   horária?
                   <span class="faq-seta" aria-hidden="true">
@@ -1128,7 +1180,7 @@ Justificativa:</pre>
               </div>
 
               <div class="faq-item">
-                <button class="faq-pergunta" aria-expanded="false" onclick="toggle(this)">
+                <button class="faq-pergunta" aria-expanded="false">
                   Posso realizar mais de um estágio ao mesmo tempo?
                   <span class="faq-seta" aria-hidden="true">
                     <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
@@ -1137,9 +1189,21 @@ Justificativa:</pre>
                 <div class="faq-resposta">
                   <p>Existem algumas combinações possíveis a considerar:</p>
                   <ul>
-                    <li><strong>Dois estágios obrigatórios simultaneamente:</strong> não é permitido. Só é possível realizar um estágio obrigatório por vez.</li>
-                    <li><strong>Um estágio obrigatório e um não obrigatório ao mesmo tempo:</strong> em princípio não é permitido pela legislação, mas esta situação não foi confirmada diretamente com a coordenação.</li>
-                    <li><strong>Dois ou mais estágios não obrigatórios simultaneamente:</strong> a Lei Federal nº 11.788/2008 não proíbe explicitamente, mas instituições públicas costumam vedar em seus regulamentos internos. Verifique com a concedente.</li>
+                    <li>
+                      <strong>Dois estágios obrigatórios simultaneamente:</strong>
+                      não é permitido. Só é possível realizar um estágio obrigatório por vez.
+                    </li>
+                    <li>
+                      <strong>Um estágio obrigatório e um não obrigatório ao mesmo tempo:</strong>
+                      em princípio não é permitido pela legislação, mas esta situação não foi
+                      confirmada diretamente com a coordenação.
+                    </li>
+                    <li>
+                      <strong>Dois ou mais estágios não obrigatórios simultaneamente:</strong>
+                      a Lei Federal nº 11.788/2008 não proíbe explicitamente, mas instituições
+                      públicas costumam vedar em seus regulamentos internos. Verifique com a
+                      concedente.
+                    </li>
                   </ul>
                   <p class="nao-confirmada">
                     Esta informação não foi confirmada pela coordenação. Para esclarecimentos, entre
@@ -1208,10 +1272,11 @@ Justificativa:</pre>
                 <a
                   href="https://sigaa.ufpi.br/sigaa/verTelaLogin.do"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   class="contato-link"
                 >
                   sigaa.ufpi.br
+                  <span class="sr-only">(abre em nova aba)</span>
                 </a>
               </div>
             </div>
@@ -1236,8 +1301,9 @@ Justificativa:</pre>
               <div>
                 <div class="contato-titulo">Coordenadoria Geral de Estágios (CGE)</div>
                 <div class="contato-desc">Setor responsável pelo gerenciamento de estágios</div>
-                <a href="https://ufpi.br/cge" target="_blank" rel="noopener" class="contato-link">
+                <a href="https://ufpi.br/cge" target="_blank" rel="noopener noreferrer" class="contato-link">
                   ufpi.br/cge
+                  <span class="sr-only">(abre em nova aba)</span>
                 </a>
               </div>
             </div>
@@ -1262,7 +1328,7 @@ Justificativa:</pre>
         Projeto independente de apoio aos estudantes de
         <strong>Ciência da Computação — UFPI</strong>
       </p>
-      <p style="margin-top: 6px">
+      <p class="footer-disclaimer">
         As informações aqui contidas foram validadas com o Coordenador de Estágio. Em caso de
         dúvidas não cobertas, consulte diretamente a coordenação.
       </p>
