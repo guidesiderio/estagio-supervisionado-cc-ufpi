@@ -2,130 +2,122 @@
 
 ## 1. Overview & Creative North Star
 
-**Creative North Star: "The Digital Curator"**
+**Creative North Star: The Scholastic Prism**
 
-This design system rejects the "standard institutional" aesthetic of rigid grids and heavy borders. Instead, it adopts the persona of a high-end digital curator. For the Computer Science department at UFPI, we move beyond simple "trustworthiness" into "intellectual authority."
+This design system moves away from the rigid, "boxed-in" nature of traditional academic portals. Instead, it treats the UFPI Computer Science interface as a high-end digital gallery. By utilizing "The Scholastic Prism" as our guiding light, we focus on clarity, light refraction (glassmorphism), and structural integrity without the use of harsh dividers.
 
-The system utilizes **Intentional Asymmetry** and **Tonal Depth** to create a sophisticated, editorial experience. We break the template look by using exaggerated white space, overlapping typographic elements, and a "layer-first" philosophy. The goal is to make academic data feel like a premium gallery experience—organized, yet breathing with modern innovation.
+The design breaks the standard "template" aesthetic through **Architectural Asymmetry**. We utilize wide, intentional white space and offset typography to guide the eye, creating an editorial experience that feels both authoritative and cutting-edge. Every element is designed to feel like a physical layer of fine paper or frosted glass floating in a luminous, digital space.
 
 ---
 
 ## 2. Colors: Tonal Architecture
 
-We move away from flat hex codes toward a functional hierarchy. Colors are not just aesthetic; they are structural.
+The palette is rooted in a deep, academic blue (`primary: #0057bf`) balanced by a spectrum of "cool" whites and greys.
 
 ### The "No-Line" Rule
 
-**Explicit Instruction:** Designers are prohibited from using 1px solid borders for sectioning. Boundaries must be defined solely through background color shifts. Use `surface-container-low` (#f0f4f7) sections sitting against a `surface` (#f7f9fb) background to define change.
+To maintain a premium, modern feel, **1px solid borders are strictly prohibited for sectioning.** Boundaries must be defined through:
+
+- **Tonal Shifts:** Transitioning from `surface` (#faf9ff) to `surface-container-low` (#f2f3fe).
+
+- **Negative Space:** Using the spacing scale to create distinct visual islands.
 
 ### Surface Hierarchy & Nesting
 
-Treat the UI as a series of physical layers.
+Treat the UI as a series of nested physical layers.
 
-- **Layer 1 (Base):** `surface` (#f7f9fb)
+- **Base Layer:** `surface` (#faf9ff).
 
-- **Layer 2 (Sectioning):** `surface-container-low` (#f0f4f7)
+- **Secondary Content Areas:** `surface-container` (#ecedf8).
 
-- **Layer 3 (Components/Cards):** `surface-container-lowest` (#ffffff)
+- **Elevated Interactive Cards:** `surface-container-lowest` (#ffffff).
 
-- **Layer 4 (Elevated/Pop-overs):** `surface-bright` (#f7f9fb)
+By placing the "Lowest" (brightest) container on top of a "Low" or "Mid" container, we achieve natural depth and focus without artificial styling.
 
-### The Glass & Gradient Rule
+### The "Glass & Gradient" Rule
 
-To provide visual "soul," utilize **Signature Textures**:
+To inject "visual soul," use the following:
 
-- **CTAs:** Apply a subtle linear gradient from `primary` (#3a5f94) to `primary-dim` (#2d5387) at a 135-degree angle.
+- **Hero & Key CTAs:** Apply a subtle linear gradient from `primary` (#0057bf) to `primary_container` (#006fef). This adds a soft volume that flat colors lack.
 
-- **Hero Accents:** Use `surface-tint` (#3a5f94) at 5% opacity with a 40px `backdrop-blur` for floating navigation or informational overlays.
+- **Floating Navigation:** Use `surface_bright` with a 70% opacity and a `20px` backdrop-blur to create a "frosted glass" effect, allowing course content to peek through as the user scrolls.
 
 ---
 
 ## 3. Typography: Editorial Authority
 
-We pair the structural precision of **Inter** with the geometric character of **Manrope** to create a hierarchy that feels both technical and inviting.
+The typography uses a high-contrast scale to separate "Data" from "Narrative."
 
-| Level | Token | Font | Size | Character |
+- **Display & Headlines (Manrope):** Chosen for its geometric precision. Use `display-lg` (3.5rem) with tighter letter-spacing (-0.02em) for hero sections to create a bold, modern academic statement.
 
-| :--- | :--- | :--- | :--- | :--- |
+- **Body & Titles (Inter):** Chosen for maximum legibility in technical contexts.
 
-| **Display** | `display-lg` | Manrope | 3.5rem | Extra-bold, -2% tracking for Hero headers. |
-
-| **Headline** | `headline-md` | Manrope | 1.75rem | Medium, used for section titles. |
-
-| **Title** | `title-lg` | Inter | 1.375rem | Semi-bold, for card titles and faculty names. |
-
-| **Body** | `body-lg` | Inter | 1rem | Regular, 1.6 line-height for readability. |
-
-| **Label** | `label-md` | Inter | 0.75rem | All-caps, 10% letter spacing for metadata. |
-
-**The Typographic "Overlap":** To break the grid, allow `display-lg` text to slightly overlap into a different color section or over an image edge (using `on-surface` or `primary` contrast).
+- **The Hierarchy:** Use `headline-md` (1.75rem) for section titles, but pair them with `label-md` (0.75rem) in all-caps as a "kicker" above the headline to provide an organized, indexed feel.
 
 ---
 
-## 4. Elevation & Depth: Tonal Layering
+## 4. Elevation & Depth
 
-Depth is achieved through "stacking" rather than traditional structural shadows.
+We eschew traditional drop shadows in favor of **Tonal Layering**.
 
-- **The Layering Principle:** Place a `surface-container-lowest` card on a `surface-container-low` background. The shift from #f0f4f7 to #ffffff creates a natural, soft "lift" that mimics fine stationery.
+- **The Layering Principle:** Soft, natural lift is achieved by stacking. A `surface-container-highest` element should never sit directly on `surface-lowest`. Always follow the tier sequence to mimic natural light fall-off.
 
-- **Ambient Shadows:** If a floating element (like a modal) is required, use: `box-shadow: 0 20px 40px rgba(42, 52, 57, 0.06);`. The shadow color must be a tinted version of `on-surface` (#2a3439), never pure black.
+- **Ambient Shadows:** If a floating state is required (e.g., an active dropdown), use an ambient shadow: `box-shadow: 0 12px 40px rgba(24, 27, 35, 0.06)`. The tint is derived from `on-surface` (#181b23) to keep it organic.
 
-- **The "Ghost Border" Fallback:** If accessibility requires a container edge, use `outline-variant` (#a9b4b9) at **15% opacity**. 100% opaque borders are strictly forbidden.
+- **The "Ghost Border" Fallback:** For high-density data tables where separation is critical, use a "Ghost Border": `outline-variant` (#c1c6d7) at **15% opacity**. This provides a hint of structure without interrupting the visual flow.
 
 ---
 
 ## 5. Components
 
-### Hero Sections
+### Buttons
 
-- **Layout:** Asymmetric. Text occupies the left 5 columns; a high-quality abstract tech visual or architectural shot of UFPI occupies the right 7, bleeding off the edge of the screen.
+- **Primary:** Solid `primary` (#0057bf) with `on_primary` (#ffffff) text. Use `DEFAULT` (1rem) roundedness.
 
-- **Styling:** Use a `primary-container` (#d5e3ff) background wash for the text area to anchor the "Institutional" vibe.
+- **Secondary:** `secondary_container` (#d5e3fc) background with `on_secondary_container` (#57657a) text. No border.
 
-### Faculty Profiles
+- **Tertiary:** Ghost style. Transparent background, `primary` text, and a `primary` "Ghost Border" (10% opacity) that becomes 20% on hover.
 
-- **Structure:** No containers. Use a large `surface-dim` (#cfdce3) circular mask for the portrait.
+### Cards & Lists
 
-- **Details:** Name in `title-lg`, research area in `label-md` (uppercase), and a subtle `on-surface-variant` (#566166) for the bio.
+- **The Divider Ban:** Never use horizontal lines to separate list items. Use 16px of vertical padding and a subtle hover state using `surface-container-high` (#e6e7f3).
 
-### Information Cards
+- **Academic Course Cards:** Use `surface-container-lowest` (#ffffff) with a `DEFAULT` (1rem) corner radius. Content should be padded by at least 24px (1.5rem) to ensure the information "breathes."
 
-- **Style:** `surface-container-lowest` (#ffffff) background. No borders.
+### Input Fields
 
-- **Spacing:** `xl` (0.75rem) corner radius. Internal padding should be generous (min 32px).
+- **Styling:** Background set to `surface-container-low` (#f2f3fe).
 
-- **Interaction:** On hover, shift the background to `primary-container` (#d5e3ff) and move the card -4px on the Y-axis using a `cubic-bezier(0.2, 0, 0, 1)` transition.
+- **States:** On focus, transition the background to `surface-container-lowest` (#ffffff) and apply a 2px "Ghost Border" using the `primary` color at 40% opacity.
 
-### Contact Forms
+### Selection Chips
 
-- **Inputs:** Use the "Underline" style. A `surface-variant` (#d9e4ea) bottom bar that expands to 2px `primary` (#3a5f94) on focus.
+- Use `full` (9999px) roundedness.
 
-- **Labels:** Use `label-md` floating above the input.
+- **Unselected:** `surface-container-high` background.
 
-- **Submit:** A `primary` button with `full` (9999px) roundedness for a modern, approachable touch.
-
-### Research Chips
-
-- **Visual:** `surface-container-high` (#e1e9ee) background with `on-surface` text. No border. Radius: `md` (0.375rem).
+- **Selected:** `primary` background with `on_primary` text.
 
 ---
 
-## 6. Do’s and Don’ts
+## 6. Do's and Don'ts
 
-### Do
+### Do:
 
-- **Do** use extreme vertical white space (80px, 120px, 160px) to separate major sections.
+- **Do** use asymmetrical layouts for landing pages (e.g., an H1 on the left with a 2-column body paragraph on the right).
 
-- **Do** use `primary` (#3a5f94) sparingly for emphasis—let the `white` and `gray` do the heavy lifting.
+- **Do** prioritize `surface` color shifts over lines for sectioning.
 
-- **Do** use "Glassmorphism" for the main navigation bar (Backdrop blur: 20px, Background: `surface` at 80% opacity).
+- **Do** use `manrope` for any numbers or data visualizations to emphasize technical precision.
 
-### Don't
+- **Do** ensure all interactive elements have a `md` (1.5rem) or `lg` (2rem) radius to maintain the "Modern Academic" softness.
 
-- **Don't** use dividers or horizontal rules. Separate content with space or color blocks.
+### Don't:
 
-- **Don't** use standard "Drop Shadows" (distinguishable, dark, or blurry). Use tonal shifts.
+- **Don't** use 100% black (#000000). Always use `on_surface` (#181b23) for text to maintain a high-end, ink-on-paper feel.
 
-- **Don't** center-align long blocks of text. Stick to a strong, left-aligned editorial axis.
+- **Don't** use standard Material Design "elevated" shadows. If it looks like a default shadow, it’s too heavy.
 
-- **Don't** use pure black (#000000). Use `on-surface` (#2a3439) for all text to maintain the navy-institutional warmth.
+- **Don't** use more than two font weights in a single component. Let size and color (`on_surface_variant`) do the heavy lifting for hierarchy.
+
+- **Don't** cram content. If a section feels full, increase the padding by one step in the Spacing Scale.
