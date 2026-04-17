@@ -209,6 +209,9 @@ html.dark ::-webkit-scrollbar-thumb {
   flex-shrink: 0;
   min-width: 40px;
   min-height: 40px;
+  margin-left: 8px;
+  border-left: 1px solid var(--outline-variant);
+  padding-left: 16px;
 }
 .theme-toggle:hover {
   background: var(--surface-container-high);
@@ -349,13 +352,13 @@ header {
   display: flex;
   gap: 2px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .header-inner nav a {
   color: var(--on-surface-variant);
-  font-size: var(--text-sm);
+  font-size: 0.8rem;
   font-weight: 500;
-  padding: 8px 16px;
+  padding: 6px 8px;
   border-radius: var(--radius-full);
   transition:
     background var(--duration-normal) var(--ease-out),
@@ -465,7 +468,7 @@ header nav a:focus-visible {
     var(--surface) 100%
   );
   color: var(--on-surface);
-  padding: 128px var(--space-6) 112px;
+  padding: 80px var(--space-6) 72px;
   position: relative;
   overflow: hidden;
 }
@@ -648,6 +651,17 @@ header nav a:focus-visible {
 }
 section {
   padding: 112px 0;
+}
+/* Medium-density sections */
+#objetivos,
+#regras,
+#documentos,
+#contato {
+  padding: 80px 0;
+}
+/* Light-density sections */
+.section-light {
+  padding: 64px 0;
 }
 .section-alt {
   background: var(--surface-container-low);
@@ -1125,9 +1139,34 @@ section {
   line-height: 1.7;
 }
 
+/* ─── OBRIGAÇÕES & AVALIAÇÃO (merged) ────────── */
+.obrig-aval-layout {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+.obrig-aval-col {
+  min-width: 0;
+}
+.obrig-aval-divider {
+  width: 1px;
+  background: var(--outline-variant);
+  align-self: stretch;
+  margin: var(--space-4) 0;
+}
+.obrig-aval-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.01em;
+}
+
 /* ─── OBRIGACOES ─────────────────────────────── */
 .obrigacoes-lista {
-  max-width: 780px;
+  max-width: none;
 }
 .obrigacao-item {
   display: flex;
@@ -1166,12 +1205,6 @@ section {
 }
 
 /* ─── AVALIACAO ──────────────────────────────── */
-.avaliacao-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: var(--space-6);
-  align-items: start;
-}
 .avaliacao-main {
   border-radius: var(--radius-xl);
   padding: var(--space-6);
@@ -1245,6 +1278,7 @@ section {
   border-radius: var(--radius-xl);
   padding: var(--space-6);
   background: var(--accent-green-container);
+  margin-top: var(--space-4);
 }
 .avaliacao-aside h3 {
   font-family: var(--font-display);
@@ -1616,6 +1650,11 @@ footer strong {
 .footer-disclaimer {
   margin-top: var(--space-2);
 }
+.footer-update {
+  margin-top: var(--space-5);
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.35);
+}
 
 /* ─── ANIMATIONS ─────────────────────────────── */
 .fade-in {
@@ -1734,8 +1773,13 @@ button:focus-visible,
   .contato-grid {
     grid-template-columns: 1fr;
   }
-  .avaliacao-layout {
+  .obrig-aval-layout {
     grid-template-columns: 1fr;
+  }
+  .obrig-aval-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
   }
 }
 
@@ -1748,7 +1792,7 @@ button:focus-visible,
     display: flex;
   }
   .hero {
-    padding: 88px 20px 72px;
+    padding: 64px 20px 48px;
   }
   .hero h1 {
     font-size: clamp(2rem, 7vw, 2.75rem);
@@ -1762,6 +1806,15 @@ button:focus-visible,
   }
   section {
     padding: 80px 0;
+  }
+  #objetivos,
+  #regras,
+  #documentos,
+  #contato {
+    padding: 64px 0;
+  }
+  .section-light {
+    padding: 48px 0;
   }
   .container {
     padding: 0 20px;
@@ -1805,6 +1858,14 @@ button:focus-visible,
   .prereq-badges {
     grid-template-columns: 1fr;
   }
+  .obrig-aval-layout {
+    grid-template-columns: 1fr;
+  }
+  .obrig-aval-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
   .regras-grid {
     grid-template-columns: 1fr;
   }
@@ -1825,7 +1886,7 @@ button:focus-visible,
 /* xs: 375px */
 @media (max-width: 375px) {
   .hero {
-    padding: 72px 16px 56px;
+    padding: 56px 16px 40px;
   }
   .hero-badges {
     grid-template-columns: 1fr 1fr;
